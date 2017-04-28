@@ -20,6 +20,6 @@ class MoviesNearYou::Scraper
    get_page_info.uniq.each.with_index{|x,i| puts "#{i+1}. #{x}" }
   end
   def get_showtimes(num)
-   doc[num.to_i-1].css("time").each.with_index{|x,i| puts "#{i+1}. #{x.text}"}
+   doc[num.to_i-1].css("time").each{|x| puts "#{x.text}"}
   end
 end
