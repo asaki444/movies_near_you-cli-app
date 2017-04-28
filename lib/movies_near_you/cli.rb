@@ -8,8 +8,9 @@ class MoviesNearYou::CLI
   movie = MoviesNearYou::Scraper.new(zip)
   movie.get_page_info
   movie.print_info
-  puts "What is a good showtime?"
+  puts "Any movie that interests you?"
   time = gets.chomp
-  movie.get_showtimes(time)
+  puts "Here are the showtimes: #{movie.get_showtimes(time)}"
+
 end
 end
