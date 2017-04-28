@@ -10,7 +10,8 @@ class MoviesNearYou::CLI
   movie.print_info
   puts "Any movie that interests you?"
   time = gets.chomp
-  puts "Here are the showtimes: #{movie.get_showtimes(time)}"
-
+  puts "Here are the showtimes:"
+  movie.get_showtimes(time)
+  puts "Enjoy your Movie!"
 end
 end
