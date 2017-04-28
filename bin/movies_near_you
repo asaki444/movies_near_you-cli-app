@@ -1,3 +1,10 @@
 #!/usr/bin/env ruby
 
-puts "Hello World"
+require 'open-uri'
+require 'nokogiri'
+require "bundler/setup"
+require "movies_near_you"
+
+require './lib/movies_near_you'
+
+MoviesNearYou::CLI.new.call
